@@ -1,4 +1,5 @@
 #include <iostream>
+#include <ostream>
 
 int main (int argc, char *argv[])
 {
@@ -23,10 +24,28 @@ int main (int argc, char *argv[])
         std::cout << k << std::endl;
     }
     */
-
     std::string artistas[] = { "Scott H.", "Robert Cray", "Wes Montgomery", "Jimmy Page"};
-    for (int i = 0; i < sizeof(artistas)/sizeof(int); i++) {
-       std::cout << "message" << std::endl; 
+    /*
+    std::cout << sizeof(artistas)/sizeof(std::string) << std::endl;
+    for (int i = 0; i < sizeof(artistas)/sizeof(std::string); i++) {
+       std::cout << artistas[i] << std::endl; 
+    }
+    for( auto i : artistas ){
+        std::cout << i << std::endl;
+    }
+    */
+
+    for (int i = 0; i < 8; i++){
+        for(int k = 0; k < i + 1; k++){
+            std::cout << "*";
+        }
+
+        for(int j = 8; j > 0; j--){
+            std::cout << " ";
+        }
+
+        std::cout << '\n';
+
     }
     return 0;
 }
